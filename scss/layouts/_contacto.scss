@@ -1,0 +1,38 @@
+/*contacto*/
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 50px;
+}
+.contacto h5{
+    background-color: $color-secundario;
+    color: $color-principal;
+    padding: 20px;
+    width: 600px;
+    border-radius: 10px;
+    text-align: center;
+}
+.form_contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.form_contacto input,
+.form_contacto textarea {
+    background-color: $color-principal;
+    color: $color-secundario;
+    padding: 10px;
+    width: 600px;
+    border-radius: 10px;
+    border: 2px solid $color-secundario;
+}
+.form_contacto textarea{
+    height: 250px;
+}
+.btn_contacto:hover{
+    color: $color-principal;
+    background-color: $color-secundario;
+} 
