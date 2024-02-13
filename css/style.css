@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 * {
   margin: 0;
@@ -895,3 +896,8 @@ h5 {
 }
 
 /*# sourceMappingURL=style.css.map */
+=======
+*{
+    background-color: aqua;
+}
+>>>>>>> 6d1740a2dc18004ff9326cd8310ab4306300c488
