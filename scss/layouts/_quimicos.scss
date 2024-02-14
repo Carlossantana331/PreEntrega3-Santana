@@ -4,50 +4,53 @@
     grid-template-columns: repeat(2, 1fr);
     padding: 50px;
     gap: 5%;
-}
-.servicios_quimicos img,
-.productos_quimicos img{
-    width: 100%;
-    height: 800px;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 10px;
-    box-shadow: $boxshadow;
-}
-.servicios_quimicos,
-.productos_quimicos{
-    position: relative;
-    margin: 0 auto;
-}
-.servicios_quimicos h5,
-.productos_quimicos h5{
-    width: 100%;
-    position: absolute;
-    top: 70%;
-    font-size: 30px;
-    background-color: $color-secundario;
-    color: $color-principal;
-    padding: 50px 0px;
-    border-radius: 0px;
-}
-.productos_quimicos h6{
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    font-size: 16px;
-    background-color: #cf0606;
-    color: $color-principal;
-    padding: 30px 0px;
-    border-radius: 0px;
-    text-align: center;
-    border-radius: 50%;
-    margin: auto 0;
-    line-height: 90px;
-}
-.servicios_quimicos h5:hover,
-.productos_quimicos h5:hover{
-    padding: 48px;
-    font-size: 34px;
+
+    .servicios_quimicos,
+    .productos_quimicos{
+        position: relative;
+        margin: 0 auto;
+
+        img{
+            width: 100%;
+            height: 800px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 10px;
+            box-shadow: $boxshadow;
+        }
+
+        h5{
+            width: 100%;
+            position: absolute;
+            top: 70%;
+            font-size: 30px;
+            background-color: $color-secundario;
+            color: $color-principal;
+            padding: 50px 0px;
+            border-radius: 0px;
+
+            &:hover{
+                padding: 48px;
+                font-size: 34px;
+            }
+        }
+
+        h6{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            font-size: 16px;
+            background-color: #cf0606;
+            color: $color-principal;
+            padding: 30px 0px;
+            border-radius: 0px;
+            text-align: center;
+            border-radius: 50%;
+            margin: auto 0;
+            line-height: 90px;
+        }
+    }
+
 }

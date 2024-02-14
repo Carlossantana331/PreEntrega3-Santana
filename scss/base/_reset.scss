@@ -22,3 +22,22 @@ a {
     color: $color-secundario;
     font-size: 18px;
 }
+
+.logo img {
+    height: 70px;
+    margin: 20px;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+}
+
+h5 {
+    background-color: $color-secundario;
+    color: $color-principal;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 22px;
+}

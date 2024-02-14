@@ -5,6 +5,14 @@
     display: flex;
     max-width: 100%;
     justify-content: center;
+
+    .carousel_portada {
+        border-radius: 10px;
+        width: 80%;
+        position: relative;
+        margin: 45px;
+        box-shadow: $boxshadow;
+    }
 }
 .carousel-item img {
     width: auto;
@@ -13,70 +21,66 @@
     object-position: top;
     border-radius: 10px;
 }
-.carousel_portada {
-    border-radius: 10px;
-    width: 80%;
-    position: relative;
-    margin: 45px;
-    box-shadow: $boxshadow;
-}
+
 .carousel-caption {
     margin-bottom: 20px;
     text-align: center;
     color: $color-secundario;
     font-size: 18px;
     padding: 10px;
+
+    p {
+        background-color: rgba(240, 248, 255, 0.726);
+        padding: 15px;
+        text-align: justify;
+        border-radius: 10px;
+    }
+    
 }
-h5 {
-    background-color: $color-secundario;
-    color: $color-principal;
-    padding: 5px;
-    text-align: center;
-    border-radius: 10px;
-    font-size: 22px;
-}
-.container_portada h5:hover {
-    background-color: $color-principal;
-    color: $color-secundario;
-}
-.carousel-caption p {
-    background-color: rgba(240, 248, 255, 0.726);
-    padding: 15px;
-    text-align: justify;
-    border-radius: 10px;
-}
+
+
 
 /*nosotros*/ 
 .nosotros{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
     background-color: $color-secundario;
     padding: 80px;
-}
-.nosotros article{
-    display: inline-block;
-    padding: 10px;
-}
-.nosotros_texto{
-    width: 400px;
-    height: 450px;
-    overflow: auto;
-    color: $color-principal;
-    text-align: justify;
-    background-color: $color-tercero;
-}
-.nosotros iframe{
-    width: 800px;
-    height: 450px;
-}
-.nosotros_texto h2{
-    color: $color-secundario;
-    background-color: $color-principal;
-    padding: 10px;
-    margin: 20px 0px;
-    border-radius: 10px;
-    text-align: center;
-}
 
+    iframe{
+        width: 800px;
+        height: 100%;
+    }
+
+    &_video {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+    }
+
+    &_texto{
+        width: 100%;
+        height: 100%;
+        padding: 0px 20px;
+        overflow: auto;
+        color: $color-principal;
+        text-align: justify;
+        background-color: $color-tercero;
+
+        h2{
+            color: $color-secundario;
+            background-color: $color-principal;
+            padding: 10px;
+            margin: 20px 0px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    }
+}
+ 
 
 /*top ventas*/
 .top_ventas{
@@ -85,47 +89,63 @@ h5 {
     align-items: center;
     margin: 80px;
     gap: 40px;
+
+
+    &_titulo{
+        background-color: $color-secundario;
+        color: $color-principal;
+        padding: 10px;
+        width: 600px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    &_productos{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 80px;
+
+        img{
+            box-shadow: $boxshadow;
+            border-radius: 10px;
+        }
+
+        .card{
+            border: none;
+            text-align: center;
+
+            .card-body{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                height: auto;
+
+                h5{
+                    color: $color-principal;
+                    padding: 10px 50px;
+                    margin-top: 20px;
+                }
+
+                h6 {
+                    color: $color-principal;
+                    background-color: $color-secundario;
+                    padding: 10px 15px;
+                    border-radius: 30%;
+                }
+
+                .btn{
+                    background-color: $color-secundario;
+                    color: $color-principal;
+                    padding: 10px 15px;
+                    border: 2px solid $color-principal;
+                }
+            }
+        }
+    }
 }
-.titulo_top_ventas{
-    background-color: $color-secundario;
-    color: $color-principal;
-    padding: 10px;
-    width: 600px;
-    border-radius: 10px;
-    text-align: center;
-}
-.top_ventas_productos{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 80px;
-}
-.top_ventas_productos img{
-    box-shadow: $boxshadow;
-    border-radius: 10px;
-}
-.card{
-    border: none;
-    text-align: center;
-}
-.card-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.card h5{
-    color: $color-principal;
-    padding: 10px 50px;
-    margin-top: 20px;
-}
-.card h6 {
-    color: $color-principal;
-    background-color: $color-secundario;
-    padding: 10px 15px;
-    border-radius: 30%;
-}
-.card .btn{
-    background-color: $color-secundario;
-    color: $color-principal;
-    padding: 10px 15px;
-    border: 2px solid $color-principal;
-}
+
+
+
+
+ 

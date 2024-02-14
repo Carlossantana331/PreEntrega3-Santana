@@ -4,118 +4,139 @@
     text-align: center;
     padding: 60px;
     background-color: $color-secundario;
+
+    &_titulo{
+        background-color: $color-tercero;
+        color: $color-principal;
+        padding: 10px;
+        width: 600px;
+        border-radius: 10px;
+        margin: 0px auto;
+        margin-bottom: 40px;
+    }
+
+    &_card{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        background-color: $color-tercero;
+        padding: 20px;
+        border-radius: 10px;
+        width: 65%;
+        margin: 0 auto;
+
+        
+        .card_maderas{
+            position: relative;
+        }   
+
+        img{
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: $boxshadow;
+        }
+
+        button{
+            background-color: $color-secundario;
+            color: $color-principal;
+            padding: 10px 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            position: absolute;
+            z-index: 1;
+            left: 35%;
+            top: 65%;
+
+            &:hover{
+                background-color: $color-principal;
+                color: $color-secundario;
+            }
+        }
+    }
 }
-.titulo_cat_maderas{
-    background-color: $color-tercero;
-    color: $color-principal;
-    padding: 10px;
-    width: 600px;
-    border-radius: 10px;
-    margin: 0px auto;
-    margin-bottom: 20px;
-}
-.card_cat_maderas{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    background-color: $color-tercero;
-    padding: 20px;
-    border-radius: 10px;
-    width: 65%;
-    margin: 0 auto;
-}
-.card_cat_maderas img{
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: $boxshadow;
-}
-.card_maderas{
-    position: relative;
-}
-.card_cat_maderas button{
-    background-color: $color-secundario;
-    color: $color-principal;
-    padding: 10px 15px;
-    border-radius: 10px;
-    margin-top: 20px;
-    position: absolute;
-    z-index: 1;
-    left: 35%;
-    top: 65%;
-}
-.card_cat_maderas button:hover{
-    background-color: $color-principal;
-    color: $color-secundario;
-}
+
 
 
 /*articulos de madera*/
-.articulos{
+.articulo{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 50px 100px;
+
+    &_madera{
+        border-radius: 10px;
+        border: 2px solid $color-secundario;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+
+        &:hover{
+            background-color: $color-tercero;
+            color: $color-principal;
+        }
+
+        img{
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: $boxshadow;
+            margin: 0 auto;
+        }
+
+        &_texto{
+            text-align: center;
+
+            p{
+                font-size: 18px;
+            }
+
+            button{
+                background-color: $color-secundario;
+                color: $color-principal;
+                padding: 10px 15px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+
+                &:hover{
+                    background-color: $color-principal;
+                    color: $color-secundario;
+                }
+            }
+
+            .precio{
+                font-size: 22px;
+                background-color: #d31d1d;
+                color: $color-principal;
+                width: 50px;
+                margin: 0 auto;
+                border-radius: 10px;
+            }
+        } 
+    }
 }
-.articulo_madera{
-    border-radius: 10px;
-    border: 2px solid $color-secundario;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-.articulo_madera:hover{
-    background-color: $color-tercero;
-    color: $color-principal;
-}
-.articulo_madera img{
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: $boxshadow;
-    margin: 0 auto;
-}
-.texto_articulo_madera{
-    text-align: center;
-}
-.texto_articulo_madera p{
-    font-size: 18px;
-}
-.texto_articulo_madera button{
-    background-color: $color-secundario;
-    color: $color-principal;
-    padding: 10px 15px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-.texto_articulo_madera button:hover{
-    background-color: $color-principal;
-    color: $color-secundario;
-}
-.texto_articulo_madera .precio{
-    font-size: 22px;
-    background-color: #d31d1d;
-    color: $color-principal;
-    width: 50px;
-    margin: 0 auto;
-    border-radius: 10px;
-}
+
+
 
 .paginas_maderas{
     text-align: center;
     margin: 20px;
     font-size: 22px;
+
+    a{
+        color: $color-secundario;
+        border: 2px solid $color-secundario;
+        padding: 10px;
+
+        &:hover{
+            background-color: $color-secundario;
+            color: $color-principal;
+        }
+    }
 }
-.paginas_maderas a{
-    color: $color-secundario;
-    border: 2px solid $color-secundario;
-    padding: 10px;
-}
-.paginas_maderas a:hover{
-    background-color: $color-secundario;
-    color: $color-principal;
-}
+ 

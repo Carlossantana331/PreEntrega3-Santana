@@ -3,94 +3,62 @@ header {
     position: sticky;
     top: 0;
     z-index: 2;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
     background-color: $color-secundario;
-    align-items: center;
 }
 
-.nav_list {
-    display: flex;
-    align-items: end;
-    padding: 20px;
-    margin-right: 40px;
-}
-
-.nav_link {
-    padding: 10px;
+.nav_link{
     color: $color-principal;
+    padding: 10px;
+
+    &:hover {
+        border-bottom: 2px solid $color-principal;
+    }
 }
 
-.nav_link:hover {
-    border-bottom: 2px solid $color-principal;
-}
-.logo img {
-    height: 70px;
-    margin: 20px;
-}
-.logo img:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
-}
+
 .btn_buscar {
-    height: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: $color-principal;
+    padding: 0px 5px 0px 5px;
+    background-color: $color-secundario;
     border: 1px solid $color-principal;
     color: $color-principal;
     margin-left: -5px;
 }
-.btn_buscar:hover {
-    color: $color-secundario;
-    background-color: $color-principal;
-}
-.buscar input {
+
+.barra_buscar{
     background-color: $color-secundario;
     border: 1px solid $color-principal;
-    color: $color-principal;
-    padding: 2px;
-}
-.buscar{
-    margin-left: 20px;
+
+    &[type="search"] {
+        color: $color-principal;
+        padding-left: 5px;
+    }
 }
 
-/*navbar hamburguesa*/
-.navbar_hamburguesa{
-    display: none;
+
+.navbar-hamburguesa-logo{
+    height: 40px;
+    margin: 20px;
 }
-.fixed-top{
-    position: static;
+
+.offcanvas-body,
+.offcanvas-header{
+    background-color: $color-secundario;
+
+    .boton_cerrar {
+        color: $color-principal;
+        font-size: 20px;
+    }
 }
-.navbar-toggler-icon{
-    color: $color-principal;
-    border-radius: 10px;
-}
+
 .navbar-toggler{
-    border: 1px solid $color-principal;
+    border: 1px solid #e0e0e0;
     border-radius: 10px;
     padding: 0px 10px;
     padding-top: 10px;
+
+    &-icon{
+        color: $color-principal;
+        border-radius: 10px;
+    }
 }
-.navbar .container-fluid{
-    justify-content: end;
-    align-items: center;
-}
-.offcanvas-body .btn_buscar{
-    color: $color-secundario;
-    margin: 0 auto;
-    padding: 5px;
-}
-.offcanvas-header{
-    background-color: $color-secundario;
-    color: $color-principal;
-}
-.offcanvas-header .btn-close{
-    color: $color-principal;
-}
-.offcanvas-body .li_hamburguesa:hover{
-    border-bottom: 1px solid $color-secundario;
-}
+
