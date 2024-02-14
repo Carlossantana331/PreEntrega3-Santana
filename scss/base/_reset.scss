@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
 * {
@@ -32,8 +33,17 @@ a {
         transition: 0.5s;
     }
 }
-
-h5 {
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    color: $color-secundario;
+    margin: 50px;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid $color-secundario;
+    
+    font-size: 60px;
+}
+h2, h5, h3 {
     background-color: $color-secundario;
     color: $color-principal;
     padding: 5px;

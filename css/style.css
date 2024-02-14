@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +31,17 @@ a {
   transition: 0.5s;
 }
 
-h5 {
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  color: rgb(20, 19, 19);
+  margin: 50px;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 2px solid rgb(20, 19, 19);
+  font-size: 60px;
+}
+
+h2, h5, h3 {
   background-color: rgb(20, 19, 19);
   color: rgb(255, 255, 255);
   padding: 5px;
@@ -184,7 +195,7 @@ header {
   text-align: justify;
   background-color: #414040;
 }
-.nosotros_texto h2 {
+.nosotros_texto h3 {
   color: rgb(20, 19, 19);
   background-color: rgb(255, 255, 255);
   padding: 10px;
@@ -316,7 +327,7 @@ header {
   align-items: center;
   padding: 20px;
 }
-.servicios_electricos .servicio_elect_texto h5 {
+.servicios_electricos .servicio_elect_texto h3 {
   padding: 10px;
   width: 100%;
   margin-bottom: -10px;
@@ -349,6 +360,9 @@ header {
   margin: 0px auto;
   margin-bottom: 40px;
 }
+.categorias_maderas_titulo h3 {
+  background-color: #414040;
+}
 .categorias_maderas_card {
   display: flex;
   justify-content: center;
@@ -356,7 +370,7 @@ header {
   background-color: #414040;
   padding: 20px;
   border-radius: 10px;
-  width: 65%;
+  width: 80%;
   margin: 0 auto;
 }
 .categorias_maderas_card .card_maderas {
@@ -475,8 +489,8 @@ header {
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.699);
 }
-.portada_quimicos .servicios_quimicos h5,
-.portada_quimicos .productos_quimicos h5 {
+.portada_quimicos .servicios_quimicos h2,
+.portada_quimicos .productos_quimicos h2 {
   width: 100%;
   position: absolute;
   top: 70%;
@@ -486,13 +500,13 @@ header {
   padding: 50px 0px;
   border-radius: 0px;
 }
-.portada_quimicos .servicios_quimicos h5:hover,
-.portada_quimicos .productos_quimicos h5:hover {
+.portada_quimicos .servicios_quimicos h2:hover,
+.portada_quimicos .productos_quimicos h2:hover {
   padding: 48px;
   font-size: 34px;
 }
-.portada_quimicos .servicios_quimicos h6,
-.portada_quimicos .productos_quimicos h6 {
+.portada_quimicos .servicios_quimicos h3,
+.portada_quimicos .productos_quimicos h3 {
   width: 150px;
   height: 150px;
   position: absolute;
@@ -517,7 +531,7 @@ header {
   gap: 20px;
   margin: 50px;
 }
-.contacto h5 {
+.contacto h2 {
   background-color: rgb(20, 19, 19);
   color: rgb(255, 255, 255);
   padding: 20px;
