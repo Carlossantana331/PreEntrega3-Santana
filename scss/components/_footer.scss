@@ -1,19 +1,17 @@
 /*iconos footer*/
 footer {
     text-align: center;
-    background-color: $color-secundario;
+    background-color: $color_secundario;
     padding: 20px;
 
     .redes {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex_alterno(row, center, center);
 
     
         .icono {
             font-size: 25px;
             padding: 10px;
-            color: $color-principal;
+            color: $color_principal;
     
             &:hover {
                 transform: scale(1.5);

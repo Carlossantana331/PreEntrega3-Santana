@@ -1,14 +1,12 @@
 /*contacto*/
 .contacto{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex_alterno(column, center, center);
     gap: 20px;
     margin: 50px;
 
     h2{
-        background-color: $color-secundario;
-        color: $color-principal;
+        background-color: $color_secundario;
+        color: $color_principal;
         padding: 20px;
         width: 600px;
         border-radius: 10px;
@@ -16,20 +14,18 @@
     }
 
     .form_contacto{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex_alterno(column, center, center);
         gap: 20px;
     }
 
     input,
     textarea {
-        background-color: $color-principal;
-        color: $color-secundario;
+        background-color: $color_principal;
+        color: $color_secundario;
         padding: 10px;
         width: 600px;
         border-radius: 10px;
-        border: 2px solid $color-secundario;
+        border: 2px solid $color_secundario;
     }
 
     textarea{
@@ -38,6 +34,6 @@
 }
 
 .btn_contacto:hover{
-    color: $color-principal;
-    background-color: $color-secundario;
+    color: $color_principal;
+    background-color: $color_secundario;
 } 

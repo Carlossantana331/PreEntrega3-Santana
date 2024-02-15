@@ -3,33 +3,33 @@ header {
     position: sticky;
     top: 0;
     z-index: 2;
-    background-color: $color-secundario;
+    background-color: $color_secundario;
 }
 
 .nav_link{
-    color: $color-principal;
+    color: $color_principal;
     padding: 10px;
 
     &:hover {
-        border-bottom: 2px solid $color-principal;
+        border-bottom: 2px solid $color_principal;
     }
 }
 
 
 .btn_buscar {
     padding: 0px 5px 0px 5px;
-    background-color: $color-secundario;
-    border: 1px solid $color-principal;
-    color: $color-principal;
+    background-color: $color_secundario;
+    border: 1px solid $color_principal;
+    color: $color_principal;
     margin-left: -5px;
 }
 
 .barra_buscar{
-    background-color: $color-secundario;
-    border: 1px solid $color-principal;
+    background-color: $color_secundario;
+    border: 1px solid $color_principal;
 
     &[type="search"] {
-        color: $color-principal;
+        color: $color_principal;
         padding-left: 5px;
     }
 }
@@ -42,10 +42,10 @@ header {
 
 .offcanvas-body,
 .offcanvas-header{
-    background-color: $color-secundario;
+    background-color: $color_secundario;
 
     .boton_cerrar {
-        color: $color-principal;
+        color: $color_principal;
         font-size: 20px;
     }
 }
@@ -57,7 +57,7 @@ header {
     padding-top: 10px;
 
     &-icon{
-        color: $color-principal;
+        color: $color_principal;
         border-radius: 10px;
     }
 }

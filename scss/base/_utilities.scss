@@ -1,0 +1,16 @@
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex_alterno($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid($columns, $fr) {
+    display: grid;
+    grid-template-columns: repeat($columns, $fr) ;
+}

@@ -1,7 +1,6 @@
 /*quimicos*/
 .portada_quimicos{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    @include grid(2, 1fr);
     padding: 50px;
     gap: 5%;
 
@@ -24,8 +23,8 @@
             position: absolute;
             top: 70%;
             font-size: 30px;
-            background-color: $color-secundario;
-            color: $color-principal;
+            background-color: $color_secundario;
+            color: $color_principal;
             padding: 50px 0px;
             border-radius: 0px;
 
@@ -43,7 +42,7 @@
             right: 5%;
             font-size: 16px;
             background-color: #cf0606;
-            color: $color-principal;
+            color: $color_principal;
             padding: 30px 0px;
             border-radius: 0px;
             text-align: center;

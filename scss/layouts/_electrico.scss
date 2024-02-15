@@ -33,24 +33,22 @@
 
 /*servicios electricos*/
 .servicios_electricos{
-    display: flex;
-    flex-direction: column;
+    @include flex_alterno(column, center, center);
     gap: 40px;
     align-items: center;
-    background-color: $color-secundario;
+    background-color: $color_secundario;
     padding: 60px 0px;
 
     .servicio_elect{
-        display: flex;
-        align-items: center;
-        text-align: justify;
+        @include flex_alterno(row, center, self-start);
         padding: 0px 20px;
-        background-color: $color-tercero;
+        background-color: $color_tercero;
         border-radius: 10px;
         width: 80%;
 
 
         img{
+            justify-content: left;
             width: 600px;
             height: 100%;
             object-fit: cover;
@@ -71,9 +69,7 @@
         }
 
         &_texto{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include flex_alterno(column, center, center);
             padding: 20px;
 
             h3{
@@ -84,15 +80,15 @@
         }
 
         button{
-            background-color: $color-secundario;
-            color: $color-principal;
+            background-color: $color_secundario;
+            color: $color_principal;
             padding: 10px 15px;
             border-radius: 10px;
             font-size: 12px;
 
             &:hover{
-                background-color: $color-principal;
-                color: $color-secundario;
+                background-color: $color_principal;
+                color: $color_secundario;
             }
         }
     }
