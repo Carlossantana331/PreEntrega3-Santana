@@ -3,6 +3,9 @@
     @include flex_alterno(column, center, center);
     gap: 20px;
     margin: 50px;
+    animation-name: efecto_izq_der;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
 
     h2{
         background-color: $color_secundario;

@@ -3,10 +3,12 @@
 .portada_categoria{
     text-align: center;
     position: relative;
+    height: 100%;
+
 
     img{
         width: 80%;
-        height: 700px;
+        height: 600px;
         object-fit: cover;
         object-position: top;
         border-radius: 10px;
@@ -14,16 +16,31 @@
         box-shadow: $boxshadow;
     }
 
-    &_texto{
+    &_texto{  
         position: absolute;
-        top: 70%;
-        left: 15%;
-        width: 35%;
+        height: 87%;
+        top: 6.5%;
+        left: 40%;
+        width: 50%;
+        background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7203256302521008) 43%, rgba(0,0,0,1) 100%);
+
+        h2{
+            font-family: "Bebas Neue", sans-serif;
+            text-align: end;
+            margin: 50px 20px 50px 200px;
+            color: $color-principal;
+            font-size: 36px;
+            padding: 10px;
+            background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7203256302521008) 43%, rgba(0,0,0,1) 100%);
+        }
 
         p{
-            background-color: rgba(240, 248, 255, 0.726);
-            border-radius: 10px;
+            text-align: end;
+            margin: 50px 20px 50px 200px;
+            color: $color-secundario;
+            font-size: 16px;
             padding: 10px;
+            color: $color-principal
         }
     }
 }
@@ -94,5 +111,7 @@
     }
 
 }
+
+
 
 

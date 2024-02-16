@@ -1,0 +1,15 @@
+@keyframes efecto_izq_der{
+    0%{
+        opacity: 0;
+        transform: translate(100%, 0);
+    }
+   
+    100%{
+        opacitiy: 1;
+        
+    }
+}
+
+.animate__animated.animate__fadeIn { 
+    --animate-duration: 2s; 
+}

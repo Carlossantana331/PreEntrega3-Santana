@@ -26,7 +26,8 @@ a {
 
 .logo img {
     height: 70px;
-    margin: 20px;
+    margin: 5px;
+    margin-left: 50px;
 
     &:hover {
         transform: scale(1.1);
@@ -36,7 +37,8 @@ a {
 h1 {
     font-family: "Bebas Neue", sans-serif;
     color: $color-secundario;
-    margin: 50px;
+    margin: 30px;
+    margin-bottom: 0px;
     padding: 10px;
     text-align: center;
     border-bottom: 2px solid $color-secundario;
