@@ -52,7 +52,7 @@ h2, h5, h3 {
   font-size: 22px;
 }
 
-.flex, .paginas_maderas, .container_portada {
+.flex, .paginas_maderas, .categorias_maderas_card, .container_portada {
   display: flex;
   justify-content: center;
 }
@@ -385,6 +385,81 @@ header {
   color: rgb(20, 19, 19);
 }
 
+/*maderas*/
+/*categorias*/
+.categorias_maderas {
+  text-align: center;
+  padding: 60px;
+  background-color: rgb(20, 19, 19);
+}
+.categorias_maderas_titulo {
+  background-color: #414040;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  width: 600px;
+  border-radius: 10px;
+  margin: 0px auto;
+  margin-bottom: 40px;
+}
+.categorias_maderas_titulo h3 {
+  background-color: #414040;
+}
+.categorias_maderas_card {
+  gap: 50px;
+  background-color: #414040;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 60%;
+  margin: 0 auto;
+}
+.categorias_maderas_card .card_maderas {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.categorias_maderas_card .card_maderas:hover .card_maderas_texto {
+  transform: translateX(0);
+}
+.categorias_maderas_card .card_maderas_texto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.342);
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+.categorias_maderas_card .card_maderas img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.699);
+  transition: transform 0.5s ease;
+}
+.categorias_maderas_card .card_maderas button {
+  background-color: rgb(20, 19, 19);
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 12px;
+}
+.categorias_maderas_card .card_maderas button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(20, 19, 19);
+}
+
 /*articulos de madera*/
 .articulo {
   display: grid;
@@ -446,6 +521,7 @@ header {
   border-radius: 10px;
 }
 
+/*botones de paginacion*/
 .paginas_maderas {
   text-align: center;
   gap: 5px;
@@ -608,171 +684,27 @@ header {
 }
 
 /*responsive*/
-/*navbar*/
 @media (max-width: 1024px) {
-  nav .buscar,
-  nav .nav_list {
-    display: none;
-  }
-  .navbar_hamburguesa {
-    display: block;
-    margin: 0px 40px 0px;
-  }
-  .navbar-toggler {
-    font-size: 25px;
-  }
-}
-/*index*/
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .nosotros_texto {
-    width: 100%;
-  }
-  .nosotros iframe {
-    max-width: 100%;
-  }
-  .top_ventas_productos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .nosotros_texto,
-  .top_ventas_productos {
-    font-size: 16px;
-  }
-  .titulo_top_ventas {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  .texto_portada p {
-    display: none;
-  }
-  .logo img {
-    height: 20px;
-    margin: 10px;
-    align-content: center;
-  }
-  .nav {
-    align-content: center;
-  }
-  .navbar_hamburguesa {
-    margin: 5px;
-  }
-  .navbar-toggler {
-    font-size: 10px;
-  }
-  .carousel-item img {
-    height: 300px;
-  }
-  .container_portada {
+  .logo, logo img {
+    transform: scale(0.5);
     padding: 0px;
   }
-  .nosotros {
-    padding: 10px;
+  .navbar-toggler {
+    font-size: 15px;
   }
-  .nosotros article {
-    height: 300px;
-    width: 100%;
+  .navbar {
+    justify-self: left;
   }
-  .nosotros iframe {
-    height: 100%;
-    width: 100%;
+}
+@media (max-width: 390px) {
+  .navbar .container-fluid {
+    justify-content: space-around;
   }
-  .nosotros p {
-    font-size: 12px;
-  }
-  .titulo_top_ventas {
-    width: 100%;
-  }
-  .top_ventas_productos {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-  }
-  .icono i {
-    font-size: 10px;
-    text-align: center;
-  }
-  footer {
-    padding: 5px;
+  .logo img {
+    margin: 0px;
   }
 }
 /*electrico*/
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .texto_portada_categoria,
-  .texto_portada_categoria h5 {
-    width: 80%;
-    font-size: 16px;
-    left: 18%;
-    top: 55%;
-  }
-  .texto_portada_categoria p {
-    display: none;
-  }
-  .servicio_elect {
-    flex-direction: column;
-    align-items: center;
-  }
-  .servicio_elect_invertido {
-    flex-direction: column-reverse;
-  }
-  .servicio_elect button {
-    position: static;
-    margin: auto;
-  }
-  .texto_servicio_elect {
-    max-width: 100%;
-    text-align: center;
-    padding: 10px 0px 30px 0px;
-  }
-  .servicio_elect {
-    width: 70%;
-    gap: 0px;
-  }
-  .servicio_elect img,
-  .texto_servicio_elect {
-    width: 100%;
-    margin: 10px auto;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  .portada_categoria img {
-    height: 300px;
-    margin: 45px 0px;
-  }
-  .servicio_elect img {
-    width: 100%;
-    margin: 0px;
-  }
-  .texto_portada_categoria p {
-    display: none;
-  }
-  .texto_portada_categoria {
-    top: 35%;
-    left: 42%;
-  }
-  .servicio_elect {
-    width: 95%;
-    flex-direction: column;
-    padding: 0px;
-    margin: 5px;
-    gap: 20px;
-  }
-  .texto_servicio_elect {
-    height: 350px;
-    font-size: 12px;
-    overflow: auto;
-  }
-  .servicio_elect p {
-    height: 100vh;
-  }
-  .servicio_elect button {
-    display: none;
-  }
-  .servicio_elect_invertido {
-    flex-direction: column-reverse;
-  }
-}
 /*maderas*/
 @media (max-width: 1200px) {
   .articulos {
@@ -850,7 +782,7 @@ header {
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .form_contacto input,
   .form_contacto textarea,
-  .contacto h5 {
+  .contacto h2 {
     width: 95vw;
   }
 }
