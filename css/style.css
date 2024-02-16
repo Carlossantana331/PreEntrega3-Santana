@@ -52,7 +52,7 @@ h2, h5, h3 {
   font-size: 22px;
 }
 
-.flex, .paginas_maderas, .categorias_maderas_card, .container_portada {
+.flex, .paginas_maderas, .container_portada {
   display: flex;
   justify-content: center;
 }
@@ -301,6 +301,7 @@ header {
   left: 40%;
   width: 50%;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7203256303) 43%, rgb(0, 0, 0) 100%);
+  border-radius: 10px;
 }
 .portada_categoria_texto h2 {
   font-family: "Bebas Neue", sans-serif;
@@ -384,86 +385,13 @@ header {
   color: rgb(20, 19, 19);
 }
 
-/*maderas*/
-/*categorias*/
-.categorias_maderas {
-  text-align: center;
-  padding: 60px;
-  background-color: rgb(20, 19, 19);
-}
-.categorias_maderas_titulo {
-  background-color: #414040;
-  color: rgb(255, 255, 255);
-  padding: 10px;
-  width: 600px;
-  border-radius: 10px;
-  margin: 0px auto;
-  margin-bottom: 40px;
-}
-.categorias_maderas_titulo h3 {
-  background-color: #414040;
-}
-.categorias_maderas_card {
-  gap: 50px;
-  background-color: #414040;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  margin: 0 auto;
-}
-.categorias_maderas_card .card_maderas {
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-}
-.categorias_maderas_card .card_maderas:hover .card_maderas_texto {
-  transform: translateX(0);
-}
-.categorias_maderas_card .card_maderas_texto {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.342);
-  color: rgb(255, 255, 255);
-  border-radius: 10px;
-  padding: 10px;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  transform: translateY(100%);
-  transition: transform 0.5s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.categorias_maderas_card .card_maderas img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.699);
-  transition: transform 0.5s ease;
-}
-.categorias_maderas_card .card_maderas button {
-  background-color: rgb(20, 19, 19);
-  color: rgb(255, 255, 255);
-  padding: 5px 10px;
-  border-radius: 10px;
-  margin-top: 20px;
-  font-size: 12px;
-}
-.categorias_maderas_card .card_maderas button:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(20, 19, 19);
-}
-
 /*articulos de madera*/
 .articulo {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  text-align: center;
   gap: 20px;
-  padding: 50px 100px;
+  padding: 100px;
 }
 .articulo_madera {
   border-radius: 10px;
@@ -472,7 +400,7 @@ header {
   overflow: hidden;
   width: 350px;
   height: 450px;
-  text-align: center;
+  justify-self: center;
 }
 .articulo_madera:hover img {
   width: 300px;
@@ -495,7 +423,7 @@ header {
   margin: 0px 10px;
 }
 .articulo_madera_texto p {
-  font-size: 12px;
+  font-size: 16px;
   margin-top: 10px;
 }
 .articulo_madera_texto button {
