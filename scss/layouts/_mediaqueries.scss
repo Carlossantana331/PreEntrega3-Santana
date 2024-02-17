@@ -4,103 +4,88 @@
 
 
 @media (max-width: 1024px) {
-    .logo, logo img  {
-        transform: scale(0.5);
+
+    /*header*/
+    .logo, .logo img  {
+        transform: scale(0.6);
         padding: 0px;
     }
-
-
-    .navbar-toggler {
-        font-size: 15px;
+    .logo {
+        width: 0px;
     }
-    
+    .navbar-toggler {
+        transform: scale(0.6);
+    }
     .navbar {
         justify-self: left;
     }
 
-}
-@media (max-width: 390px) {
-    .navbar .container-fluid{
-        justify-content: space-around;
-    }
-    .logo img  {
-        margin: 0px;
+    h1{
+        font-size: 24px;
     }
 
-
-
-}
-
-
-/*electrico*/
-@media screen and (min-width: 320px) and (max-width: 390px) {
-
-}
-
-
-
-
-
-
-
-
-
-/*maderas*/
-@media (max-width: 1200px) {
-    .articulos{
-        grid-template-columns: repeat(3, 1fr);
-        padding: 10px 2px;
+    /*index*/
+    /*portada*/
+    .carousel-item img{
+        height: 400px;
     }
-}
-@media (max-width: 1024px) {
-    .articulos{
-        grid-template-columns: repeat(2, 1fr);
-        padding: 10px 2px;
+    .texto_portada p{
+        display: none;
     }
-    .card_cat_maderas{
+
+    /*nosotros*/
+    .nosotros{
+        grid-template-columns: 1fr;
+        justify-content: center;
+        height: auto;
+        gap: 20px;
+
+        &_video{
+            width: 100%;
+            height: 300px;
+            padding: 0px;
+
+            iframe{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &_texto{
+            width: 100%;
+            height: 300px;
+            padding: 20px;
+            font-size: 14px;
+        }
+    }
+
+    /*top ventas*/
+    .top_ventas_productos{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 30px;
-        width: 90%;
     }
-}
-@media screen and (min-width: 320px) and (max-width: 768px){
-    .articulos{
-        grid-template-columns: repeat(1, 1fr);
-    }.card_cat_maderas {
-        display: flex;
+
+
+
+    /*electrico*/
+    .servicio_elect{
         flex-wrap: wrap;
-        gap: 30px;
-        width: 95vw;
-        padding: 0px;
-        margin: 0 auto;
     }
-    .categorias_maderas {
-        padding: 0px;
-        align-items: center;
+    .servicios_electricos .servicio_elect_invertido{
+        flex-wrap: wrap-reverse;
     }
-    .titulo_cat_maderas {
-        width: 100vw;
-    }
-    .articulos, 
-    .articulo_madera {
-        padding: 10px 2px;
-    }
-    .articulo_madera img {
-        width: 80%;
-        height: 40%;
-        object-fit: cover;
-        border-radius: 10px;
-        box-shadow: $boxshadow;
-        margin: 0 auto;
-    }
-}
 
 
+    /*articulos maderas*/
+    .categorias_maderas_card{
+        flex-wrap: wrap;
+    }
+    .articulo{
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-/*quimicos*/
-@media (max-width: 1024px) {
+    /*quimicos*/
     .portada_quimicos{
         grid-template-columns: repeat(1, 1fr);
         gap: 40px;
@@ -108,26 +93,102 @@
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px){
+
+@media (max-width: 768px) {
+
+    /*header*/
+    .navbar .container-fluid{
+        justify-content: space-between;
+    }
+    .logo img  {
+        margin: 0px;
+    }
+
+
+    /*index*/
+    /*portada*/
+    .carousel-item img{
+        height: 400px;
+    }
+    .texto_portada h2{
+       font-size: 12px;
+    }
+
+    /*nosotros*/
+    .nosotros_texto, .nosotros_texto h3{
+        font-size: 10px;
+    }
+
+    /*top vetas*/
+    .top_ventas_titulo{
+        width: 100%;
+    }
+
+
+    /*electrico*/
+    /*portda*/
+    .portada_categoria{
+        img{
+            height: 400px;
+        }
+
+        &_texto{
+            display: none;
+        }
+    } 
+
+    .servicios_electricos .servicio_elect p{
+        font-size: 10px;
+    }
+    .servicios_electricos .servicio_elect_texto h3{
+        font-size: 16px;
+    }
+
+    /*articulos maderas*/
+    .articulo{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /*quimicos*/
     .servicios_quimicos img,
     .productos_quimicos img{
         width: 90vw;
         height: 350px;
     }
-    .servicios_quimicos h5,
-    .productos_quimicos h5{
+    .servicios_quimicos h2,
+    .productos_quimicos h2{
         width: 100%;
         font-size: 18px;
         padding: 15px;
     }
-}
 
 
-/*contacto*/
-@media screen and (min-width: 320px) and (max-width: 768px){
     .form_contacto input, 
     .form_contacto textarea,
     .contacto h2 {
         width: 95vw;
     }
 }
+
+
+
+
+@media (max-width: 550px){
+    .categorias_maderas{
+        padding: 0px;
+    }
+    .categorias_maderas_card{
+        width: 90%;
+    }
+    .articulo{
+        grid-template-columns: 1fr;
+    }
+
+    .paginas_maderas a{
+        padding: 5px;
+        font-size: 10px;
+    }
+}
+    
+        

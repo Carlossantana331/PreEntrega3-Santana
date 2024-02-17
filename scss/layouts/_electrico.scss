@@ -2,8 +2,10 @@
 /*portada*/
 .portada_categoria{
     text-align: center;
-    position: relative;
+    width: 80%;
+    margin: 0 auto;
     height: 100%;
+    position: relative;
 
 
     img{
@@ -20,8 +22,8 @@
         position: absolute;
         height: 87%;
         top: 6.5%;
-        left: 40%;
-        width: 50%;
+        left: 30%;
+        width: 60%;
         background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7203256302521008) 43%, rgba(0,0,0,1) 100%);
         border-radius: 10px;
 
@@ -37,11 +39,12 @@
 
         p{
             text-align: end;
-            margin: 50px 20px 50px 200px;
             color: $color-secundario;
-            font-size: 16px;
+            font-size: 80%;
             padding: 10px;
-            color: $color-principal
+            color: $color-principal;
+            margin-left: 100px;
+            
         }
     }
 }
@@ -51,27 +54,29 @@
 
 /*servicios electricos*/
 .servicios_electricos{
-    @include flex_alterno(column, center, center);
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 40px;
-    align-items: center;
     background-color: $color_secundario;
     padding: 60px 0px;
 
     .servicio_elect{
-        @include flex_alterno(row, center, self-start);
-        padding: 0px 20px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 10px 0px 20px;
         background-color: $color_tercero;
         border-radius: 10px;
         width: 80%;
 
-
         img{
             justify-content: left;
-            width: 600px;
-            height: 100%;
+            width: 100%;
+            height: auto;
             object-fit: cover;
             border-radius: 10px;
-            margin: 20px;
             box-shadow: $boxshadow;
         }
 
@@ -88,7 +93,7 @@
 
         &_texto{
             @include flex_alterno(column, center, center);
-            padding: 20px;
+            padding: 20px 0px;
 
             h3{
                 padding: 10px;

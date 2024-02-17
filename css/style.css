@@ -25,7 +25,6 @@ a {
 .logo img {
   height: 70px;
   margin: 5px;
-  margin-left: 50px;
 }
 .logo img:hover {
   transform: scale(1.1);
@@ -195,7 +194,7 @@ header {
   height: 700px;
 }
 .nosotros iframe {
-  width: 800px;
+  width: 100%;
   height: 100%;
 }
 .nosotros_video {
@@ -235,7 +234,7 @@ header {
   background-color: rgb(20, 19, 19);
   color: rgb(255, 255, 255);
   padding: 10px;
-  width: 600px;
+  width: 65%;
   border-radius: 10px;
   text-align: center;
 }
@@ -282,8 +281,10 @@ header {
 /*portada*/
 .portada_categoria {
   text-align: center;
-  position: relative;
+  width: 80%;
+  margin: 0 auto;
   height: 100%;
+  position: relative;
 }
 .portada_categoria img {
   width: 80%;
@@ -298,8 +299,8 @@ header {
   position: absolute;
   height: 87%;
   top: 6.5%;
-  left: 40%;
-  width: 50%;
+  left: 30%;
+  width: 60%;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7203256303) 43%, rgb(0, 0, 0) 100%);
   border-radius: 10px;
 }
@@ -314,41 +315,38 @@ header {
 }
 .portada_categoria_texto p {
   text-align: end;
-  margin: 50px 20px 50px 200px;
   color: rgb(20, 19, 19);
-  font-size: 16px;
+  font-size: 80%;
   padding: 10px;
   color: rgb(255, 255, 255);
+  margin-left: 100px;
 }
 
 /*servicios electricos*/
 .servicios_electricos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 40px;
-  align-items: center;
   background-color: rgb(20, 19, 19);
   padding: 60px 0px;
 }
 .servicios_electricos .servicio_elect {
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: self-start;
-  padding: 0px 20px;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 10px 0px 20px;
   background-color: #414040;
   border-radius: 10px;
   width: 80%;
 }
 .servicios_electricos .servicio_elect img {
   justify-content: left;
-  width: 600px;
-  height: 100%;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 10px;
-  margin: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.699);
 }
 .servicios_electricos .servicio_elect p {
@@ -366,7 +364,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 20px 0px;
 }
 .servicios_electricos .servicio_elect_texto h3 {
   padding: 10px;
@@ -396,7 +394,7 @@ header {
   background-color: #414040;
   color: rgb(255, 255, 255);
   padding: 10px;
-  width: 600px;
+  width: 60%;
   border-radius: 10px;
   margin: 0px auto;
   margin-bottom: 40px;
@@ -409,7 +407,7 @@ header {
   background-color: #414040;
   padding: 20px;
   border-radius: 10px;
-  max-width: 60%;
+  max-width: 80%;
   margin: 0 auto;
 }
 .categorias_maderas_card .card_maderas {
@@ -466,20 +464,20 @@ header {
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
   gap: 20px;
-  padding: 100px;
+  padding: 100px 0px;
 }
 .articulo_madera {
   border-radius: 10px;
   border: 2px solid rgb(20, 19, 19);
   position: relative;
   overflow: hidden;
-  width: 350px;
-  height: 450px;
+  width: 250px;
+  height: 350px;
   justify-self: center;
 }
 .articulo_madera:hover img {
-  width: 300px;
-  height: 250px;
+  width: 200px;
+  height: 150px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.699);
@@ -685,105 +683,153 @@ header {
 
 /*responsive*/
 @media (max-width: 1024px) {
-  .logo, logo img {
-    transform: scale(0.5);
+  /*header*/
+  .logo, .logo img {
+    transform: scale(0.6);
     padding: 0px;
   }
+  .logo {
+    width: 0px;
+  }
   .navbar-toggler {
-    font-size: 15px;
+    transform: scale(0.6);
   }
   .navbar {
     justify-self: left;
   }
-}
-@media (max-width: 390px) {
-  .navbar .container-fluid {
-    justify-content: space-around;
+  h1 {
+    font-size: 24px;
   }
-  .logo img {
-    margin: 0px;
+  /*index*/
+  /*portada*/
+  .carousel-item img {
+    height: 400px;
   }
-}
-/*electrico*/
-/*maderas*/
-@media (max-width: 1200px) {
-  .articulos {
-    grid-template-columns: repeat(3, 1fr);
-    padding: 10px 2px;
+  .texto_portada p {
+    display: none;
   }
-}
-@media (max-width: 1024px) {
-  .articulos {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 10px 2px;
+  /*nosotros*/
+  .nosotros {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    height: auto;
+    gap: 20px;
   }
-  .card_cat_maderas {
+  .nosotros_video {
+    width: 100%;
+    height: 300px;
+    padding: 0px;
+  }
+  .nosotros_video iframe {
+    width: 100%;
+    height: 100%;
+  }
+  .nosotros_texto {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    font-size: 14px;
+  }
+  /*top ventas*/
+  .top_ventas_productos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
-    width: 90%;
   }
-}
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  .articulos {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .card_cat_maderas {
-    display: flex;
+  /*electrico*/
+  .servicio_elect {
     flex-wrap: wrap;
-    gap: 30px;
-    width: 95vw;
-    padding: 0px;
-    margin: 0 auto;
   }
-  .categorias_maderas {
-    padding: 0px;
-    align-items: center;
+  .servicios_electricos .servicio_elect_invertido {
+    flex-wrap: wrap-reverse;
   }
-  .titulo_cat_maderas {
-    width: 100vw;
+  /*articulos maderas*/
+  .categorias_maderas_card {
+    flex-wrap: wrap;
   }
-  .articulos,
-  .articulo_madera {
-    padding: 10px 2px;
+  .articulo {
+    grid-template-columns: repeat(3, 1fr);
   }
-  .articulo_madera img {
-    width: 80%;
-    height: 40%;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.699);
-    margin: 0 auto;
-  }
-}
-/*quimicos*/
-@media (max-width: 1024px) {
+  /*quimicos*/
   .portada_quimicos {
     grid-template-columns: repeat(1, 1fr);
     gap: 40px;
     justify-content: center;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media (max-width: 768px) {
+  /*header*/
+  .navbar .container-fluid {
+    justify-content: space-between;
+  }
+  .logo img {
+    margin: 0px;
+  }
+  /*index*/
+  /*portada*/
+  .carousel-item img {
+    height: 400px;
+  }
+  .texto_portada h2 {
+    font-size: 12px;
+  }
+  /*nosotros*/
+  .nosotros_texto, .nosotros_texto h3 {
+    font-size: 10px;
+  }
+  /*top vetas*/
+  .top_ventas_titulo {
+    width: 100%;
+  }
+  /*electrico*/
+  /*portda*/
+  .portada_categoria img {
+    height: 400px;
+  }
+  .portada_categoria_texto {
+    display: none;
+  }
+  .servicios_electricos .servicio_elect p {
+    font-size: 10px;
+  }
+  .servicios_electricos .servicio_elect_texto h3 {
+    font-size: 16px;
+  }
+  /*articulos maderas*/
+  .articulo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /*quimicos*/
   .servicios_quimicos img,
   .productos_quimicos img {
     width: 90vw;
     height: 350px;
   }
-  .servicios_quimicos h5,
-  .productos_quimicos h5 {
+  .servicios_quimicos h2,
+  .productos_quimicos h2 {
     width: 100%;
     font-size: 18px;
     padding: 15px;
   }
-}
-/*contacto*/
-@media screen and (min-width: 320px) and (max-width: 768px) {
   .form_contacto input,
   .form_contacto textarea,
   .contacto h2 {
     width: 95vw;
+  }
+}
+@media (max-width: 550px) {
+  .categorias_maderas {
+    padding: 0px;
+  }
+  .categorias_maderas_card {
+    width: 90%;
+  }
+  .articulo {
+    grid-template-columns: 1fr;
+  }
+  .paginas_maderas a {
+    padding: 5px;
+    font-size: 10px;
   }
 }
 
